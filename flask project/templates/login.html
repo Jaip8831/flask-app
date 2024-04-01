@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+
+{%block title%}
+<title>Login page</title>
+{%endblock title%}
+
+{%block body%}
+<div id="login">
+<h1>Login Page</h1>
+<form action="/login" method="POST">
+<input type="text" name="username" placeholder="Username">
+<input type="text" name="password" placeholder="password">
+<input type="submit" value="Login">
+
+
+</form>
+</div>
+
+<div id="log">
+    {% if good %}
+    <h1>Login succes</h1>
+    {% elif good==None %}
+    <h1>no error</h1>
+    {% else %}
+    <h1>login Failed</h1>
+    {% endif %}
+</div>
+<style>
+    #login{
+        position: relative;
+        top: 150px;
+    }
+
+    input{
+
+        display:block;
+        height: 20px;
+        margin-top: 30px;
+        height: 25px;
+    }
+    #log{
+        position: relative;
+        top: 200px;
+    }
+</style>
+
+{%endblock body%}

@@ -1,0 +1,42 @@
+{% extends 'index.html' %}
+
+{% block title %}
+<title>Register page</title>
+{% endblock title %}
+
+{% block body %}
+
+
+
+<div id="userRegister">
+
+    <h1>Register Your Account</h1>
+    <form action="/register" method="POST">
+    <input type="text" placeholder="First Name" id="uname" name="fName">
+    <input type="text" placeholder="Last Name" id="lName" name="lName">
+    <input type="text" placeholder="Username" id="username" name="uName">
+    <input type="text" placeholder="Email" id="umail" name="uMail">
+    <input type="text" placeholder="Password" id="pass" name="uPass">
+
+    <input type="submit" id="sub">
+    </form>
+
+</div>
+
+
+<style>
+    #userRegister{
+       position: relative;
+       top: 170px;
+    }
+
+input{
+    width: 200px;
+    height: 20px;
+    font-size: 10px;
+    display: block;
+    margin-top: 20px;
+}
+    
+</style>
+{% endblock body %}
